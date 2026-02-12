@@ -5,13 +5,14 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\categoryController;
 use App\Http\Controllers\bookController;
+use App\Http\Controllers\AuthController;
 
 Route::get('/users', [Usercontroller::class, 'index']);
 Route::get('/users/{id}', [Usercontroller::class, 'show']);
 
 
 Route::get('/', function () {
-    return 'Hello World';
+    return view('home');
 });
 
 Route::post('/submit', function () {
